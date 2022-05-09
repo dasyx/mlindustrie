@@ -1,0 +1,28 @@
+//      APP.VUE           //
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+//     HEADER.VUE        //
+
+
+.navbar {
+    background-color: rgb(192, 196, 194);
+}
+.navbar-item img {
+    max-height: 4.75rem;
+}
+.navbar-brand {
+    min-height: 5.25rem;
+}
+.navbar-brand a {
+    text-decoration: none;
+}
+.navbar-brand a img {
+    display: block;
+} 
+
