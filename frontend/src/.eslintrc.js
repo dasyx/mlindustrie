@@ -10,6 +10,7 @@ module.exports = {
     'vue/no-unused-vars': 'error',
     'vue/multi-word-component-names': 'off',
     'vue/html-self-closing': 'off',
+    'vue/no-multiple-template-root': 'off',
      indent: 'off'
   }
 }

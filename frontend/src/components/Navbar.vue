@@ -51,17 +51,17 @@
 
           <div class="navbar-dropdown">
             <a class="navbar-item">
-              About
+              Tarifs
             </a>
             <a class="navbar-item">
-              Jobs
+              Programmes
             </a>
             <a class="navbar-item">
-              Contact
+              Livret Stagiaire
             </a>
             <hr class="navbar-divider">
             <a class="navbar-item">
-              Report an issue
+              CGV
             </a>
           </div>
         </div>
