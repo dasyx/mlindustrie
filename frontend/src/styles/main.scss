@@ -11,7 +11,7 @@
 
 
 .navbar {
-    background-color: rgb(192, 196, 194);
+    background-color: #c0c4c2;
 }
 .navbar-item img {
     max-height: 4.75rem;
@@ -25,4 +25,20 @@
 .navbar-brand a img {
     display: block;
 } 
+#btn-inscription {
+    background-color: #267a89;
+}
 
+//     FOOTER.VUE        //
+
+
+footer {
+    background-color: #c0c4c2 !important;
+}
+.copyright {
+    background-color: #267a89;
+}
+#subscribe {
+    margin-top: 20px;
+    background-color: #267a89;
+}
