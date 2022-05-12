@@ -1,44 +1,61 @@
-//      APP.VUE           //
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
 
+
+body {
+    margin: 0;
+}
+
+//      APP.VUE           //
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
 //     HEADER.VUE        //
 
-
 .navbar {
-    background-color: #c0c4c2;
+  background-color: #c0c4c2;
 }
 .navbar-item img {
-    max-height: 4.75rem;
+  max-height: 4.75rem;
 }
 .navbar-brand {
-    min-height: 5.25rem;
+  min-height: 5.25rem;
 }
 .navbar-brand a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .navbar-brand a img {
-    display: block;
-} 
-#btn-inscription {
-    background-color: #267a89;
+  display: block;
 }
+#btn-inscription {
+  background-color: #267a89;
+}
+
 
 //     FOOTER.VUE        //
 
-
 footer {
-    background-color: #c0c4c2 !important;
+  margin-top: auto;
+  background-color: #c0c4c2 !important;
 }
 .copyright {
-    background-color: #267a89;
+  @include fixedBottom;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #267a89;
+  @media screen and (max-width: 769px) {
+      height: 100px;
+  }
 }
 #subscribe {
-    margin-top: 20px;
-    background-color: #267a89;
+  margin-top: 20px;
+  background-color: #267a89;
 }
