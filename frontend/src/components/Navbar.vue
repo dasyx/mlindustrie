@@ -4,8 +4,8 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
           <img src="../../public/logos/logo_mlindustrie.png" />
+          <img src="../../public/img/accompagne.png" />
         </a>
-
         <a
           id="burger"
           role="button"
@@ -47,6 +47,7 @@
         <!-- Affichage du titre principal de la page-->
         <a class="navbar-item">
           <h1>ML INDUSTRIE</h1>
+          <h2>Un réseau de formations fiable et efficace !</h2>
         </a>
         <div class="navbar-end">
           <div class="navbar-item">

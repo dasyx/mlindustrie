@@ -1,58 +1,72 @@
 <template>
   <Header />
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Quo reiciendis molestias aut explicabo ipsum eos vero
-    necessitatibus ea voluptatibus molestias et doloremque dolores ad vitae
-    praesentium. Sit cumque incidunt aut sunt nulla aut praesentium sint? Ex
-    enim mollitia sed voluptatem quas et tenetur dolorem est galisum veniam qui
-    similique ipsa eos magnam fugiat ex voluptatibus voluptate. Ut debitis
-    voluptatum aut obcaecati quod aut quia nobis et nulla minima ut galisum
-    autem et dolores odit! Et enim recusandae qui quasi autem nam architecto
-    ullam eum libero tempore sit aperiam corporis qui ullam aperiam. Sed
-    aspernatur fuga quo asperiores distinctio et accusamus et repudiandae
-    praesentium in reiciendis molestiae.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Quo reiciendis molestias aut explicabo ipsum eos vero
-    necessitatibus ea voluptatibus molestias et doloremque dolores ad vitae
-    praesentium. Sit cumque incidunt aut sunt nulla aut praesentium sint? Ex
-    enim mollitia sed voluptatem quas et tenetur dolorem est galisum veniam qui
-    similique ipsa eos magnam fugiat ex voluptatibus voluptate. Ut debitis
-    voluptatum aut obcaecati quod aut quia nobis et nulla minima ut galisum
-    autem et dolores odit! Et enim recusandae qui quasi autem nam architecto
-    ullam eum libero tempore sit aperiam corporis qui ullam aperiam. Sed
-    aspernatur fuga quo asperiores distinctio et accusamus et repudiandae
-    praesentium in reiciendis molestiae.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Quo reiciendis molestias aut explicabo ipsum eos vero
-    necessitatibus ea voluptatibus molestias et doloremque dolores ad vitae
-    praesentium. Sit cumque incidunt aut sunt nulla aut praesentium sint? Ex
-    enim mollitia sed voluptatem quas et tenetur dolorem est galisum veniam qui
-    similique ipsa eos magnam fugiat ex voluptatibus voluptate. Ut debitis
-    voluptatum aut obcaecati quod aut quia nobis et nulla minima ut galisum
-    autem et dolores odit! Et enim recusandae qui quasi autem nam architecto
-    ullam eum libero tempore sit aperiam corporis qui ullam aperiam. Sed
-    aspernatur fuga quo asperiores distinctio et accusamus et repudiandae
-    praesentium in reiciendis molestiae.
-  </p>
+  <!-- Début de la section formations-->
+  <section class="hero is-medium is-bold" id="section_formations">
+    <div class="hero-body">
+      <div class="container cont_formations">
+        <div class="flex_txt">
+          <h1 class="title">Nos formations techniques</h1>
+          <a>
+            <img src="../../public/img/formations.png" />
+          </a>
+          <div class="column">
+            <ul>
+              <li>Usinage conventionnel</li>
+              <li>Usinage commande numérique</li>
+              <li>Pneumatique</li>
+              <li>Hydraulique</li>
+              <li>Automatisme</li>
+              <li>Soudure</li>
+              <li>Mécanique</li>
+              <li>Electricité</li>
+              <li>Electronique</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <a>
+            <img class="flex_img" src="../../public/img/formations2.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Fin de la section formations-->
+  <!-- Début de la section de test (temp)-->
+  <section class="hero is-medium is-bold" id="section_test">
+    <div class="hero-body">
+      <div class="container cont_formations">
+        <div>
+          <a>
+            <img class="flex_img" src="../../public/img/atouts2.png" />
+          </a>
+        </div>
+        <div class="flex_txt" id="atouts">
+          <h1 class="title">Nos atouts</h1>
+          <a>
+            <img src="../../public/img/atouts.png" />
+          </a>
+          <div class="column">
+            <ul>
+              <li>Réactif</li>
+              <li>Professionnel</li>
+              <li>Efficace</li>
+              <li>Adaptable</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Fin de la section de test (temp)-->
   <Footer />
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 export default {
-  name: 'Home',
-  components: { Header, Footer }
-}
+  name: "Home",
+  components: { Header, Footer },
+};
 </script>

@@ -1,43 +1,58 @@
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
 
-
 body {
-    margin: 0;
+  margin: 0;
 }
 
 //      APP.VUE           //
 #app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 //     HEADER.VUE        //
 
 .navbar {
   background-color: #c0c4c2;
+  min-height: 6.25rem;
+}
+.navbar-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .navbar-item img {
   max-height: 4.75rem;
 }
+.navbar-item img:nth-of-type(2) {
+  margin-top: 5px;
+  max-height: 0.75rem;
+  width: 83%;
+  @media screen and (min-width: 730px) and (max-width: 1023px) {
+    width: 20%;
+  }
+  @media screen and (max-width: 729px) {
+    width: 35%;
+  }
+}
 .navbar-brand {
+  flex-direction: column;
   min-height: 5.25rem;
 }
 .navbar-brand a {
   text-decoration: none;
 }
-.navbar-brand a img {
-  display: block;
+.navbar-menu {
+  align-items: center;
 }
 #btn-inscription {
   background-color: #267a89;
 }
-
 
 //     FOOTER.VUE        //
 
@@ -52,10 +67,51 @@ footer {
   height: 60px;
   background-color: #267a89;
   @media screen and (max-width: 769px) {
-      height: 100px;
+    height: 100px;
   }
 }
 #subscribe {
   margin-top: 20px;
   background-color: #267a89;
+}
+
+//     HOME.VUE        //
+#section_formations {
+  //position: relative;
+  //left: -80px;
+}
+#section_test {
+  //position: relative;
+  //right: -200px;
+}
+.hero {
+  color: #fff;
+  background: rgb(83, 139, 149);
+  background: radial-gradient(
+    circle,
+    rgba(83, 139, 149, 1) 16%,
+    rgba(52, 120, 134, 1) 50%,
+    rgba(40, 88, 97, 1) 98%
+  );
+}
+.hero.is-medium .hero-body {
+  padding: 2rem 4.5rem;
+}
+.cont_formations {
+  display: flex;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+.flex_txt {
+  @include displayMenus; 
+}
+.flex_img {
+  height: 31rem;
+  @media screen and (max-width: 475px) {
+    height: 15rem;
+  }
+}
+#atouts {
+  margin-left: 80px;
 }
