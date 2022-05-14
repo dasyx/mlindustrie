@@ -25,18 +25,18 @@
         </div>
         <div>
           <a>
-            <img class="flex_img" src="../../public/img/formations2.png" />
+            <img class="flex_img" src="../../public/img/formations3.png" />
           </a>
         </div>
       </div>
     </div>
   </section>
   <!-- Fin de la section formations-->
-  <!-- Début de la section de test (temp)-->
-  <section class="hero is-medium is-bold" id="section_test">
+  <!-- Début de la section atouts-->
+  <section class="hero is-medium is-bold" id="section_atouts">
     <div class="hero-body">
-      <div class="container cont_formations">
-        <div>
+      <div class="container cont_formations" id="container_formations">
+        <div id="img_container">
           <a>
             <img class="flex_img" src="../../public/img/atouts2.png" />
           </a>
@@ -58,7 +58,61 @@
       </div>
     </div>
   </section>
-  <!-- Fin de la section de test (temp)-->
+  <!-- Fin de la section atouts-->
+  <!-- Début de la section formateurs-->
+  <section class="hero is-medium is-bold" id="section_formateurs">
+    <div class="hero-body">
+      <div class="container cont_formations" id="container_formations">
+        <div class="flex_txt" id="formateurs">
+          <h1 class="title">Nos formateurs</h1>
+          <a>
+            <img src="../../public/img/formateurs.png" />
+          </a>
+          <div class="column">
+            <ul>
+              <li>Fiables</li>
+              <li>Compétents</li>
+              <li>Disponibles</li>
+              <li>A l'écoute de vos</li>
+            </ul>
+          </div>
+        </div>
+        <div id="img_container">
+          <a>
+            <img class="flex_img" src="../../public/img/formateurs2.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Fin de la section formateurs-->
+  <!-- Début de la section certifications-->
+  <section class="hero is-medium is-bold" id="section_certifications">
+    <div class="hero-body">
+      <div class="container cont_formations" id="container_formations">
+        <div id="img_container">
+          <a>
+            <img class="flex_img" src="../../public/img/certifications2.png" />
+          </a>
+        </div>
+        <div class="flex_txt" id="certifications">
+          <h1 class="title">Nos certifications</h1>
+          <a>
+            <img src="../../public/img/certifications.png" />
+          </a>
+          <div class="column">
+            <ul>
+              <li>Tests</li>
+              <li>Evaluations</li>
+              <li>Diplômes</li>
+              <li>Certificats</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Fin de la section atouts-->
   <Footer />
 </template>
 
