@@ -3,7 +3,7 @@
     <div class="content has-text-centered">
       <div class="columns">
         <div class="column">
-          <h6>Notre histoire</h6>
+          <h6>Qui sommes-nous ?</h6>
           <p class="has-text-center">
             SAS ML INDUSTRIE au capital de 5 000€
           </p>

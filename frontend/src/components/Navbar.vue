@@ -5,6 +5,8 @@
         <a class="navbar-item" href="/">
           <img src="../../public/logos/logo_mlindustrie.png" />
           <img src="../../public/img/accompagne.png" />
+          <hr class="displayHr" id="separate">
+          <h1 id="lowResH1"></h1>
         </a>
         <a
           id="burger"
@@ -30,7 +32,7 @@
         <div class="navbar-start">
           <a class="navbar-item"> Accueil </a>
 
-          <a class="navbar-item"> Catalogue </a>
+          <a class="navbar-item" href="/catalogue"> Catalogue </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link"> Plus </a>
@@ -46,8 +48,8 @@
         </div>
         <!-- Affichage du titre principal de la page-->
         <a class="navbar-item">
-          <h1>ML INDUSTRIE</h1>
-          <h2>Un réseau de formations fiable et efficace !</h2>
+          <h1>{{ window.width >= 767 ? societe : '' }}</h1>
+          <h2>{{ window.width >= 767 ? titre : '' }}</h2>
         </a>
         <div class="navbar-end">
           <div class="navbar-item">
@@ -69,6 +71,8 @@ export default {
   data () {
     return {
       isActive: '',
+      societe: 'ML INDUSTRIE',
+      titre: 'Un réseau de formations fiable et efficace',
       active: false,
       showNavbar: true,
       window: {
@@ -94,9 +98,11 @@ export default {
     respNav () {
       if (this.window.width <= 767) {
         this.isActive = true
+        document.getElementById('lowResH1').innerHTML = this.societe + ', ' + this.titre
       }
       if (this.window.width >= 768) {
         this.isActive = false
+        document.getElementById('separate').remove('displayHr')
       }
     },
     showMobilemenu () {
