@@ -1,5 +1,7 @@
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
+@import '~bulma/css/bulma.css';
+
 
 body {
   margin: 0;
@@ -157,11 +159,31 @@ table {
   border-collapse: separate;
 }
 .th-large {
-  height: 120px;
+  height: 150px;
 }
 th {
   width: 40px;
 }
+.th_blue-bg {
+  background-color: #a3c3ce;
+}
+.th_orange-bg {
+  background-color: #d89e5b;
+}
+#th_grey-bg {
+  color: #fff;
+  background-color: #6e6d6d;
+}
 #large {
-  width: 350px;
+  width: 400px;
+  background-color: #a5a1a1;
+}
+.tarifs_table {
+  margin: 20px;
+  text-decoration: underline;
+}
+.table.is-hoverable tbody tr:not(.is-selected):hover {
+  background-color: lighten(#267b8a, 10%);
+  font-weight: bold;
+  color: #fff;
 }
