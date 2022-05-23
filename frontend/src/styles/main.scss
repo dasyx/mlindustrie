@@ -3,12 +3,24 @@
 @import '~bulma/css/bulma.css';
 
 
+
+//      GENERAL          //
+
 body {
   margin: 0;
 }
+li {
+  list-style-type: none;
+}
+li a {
+  color: #3d3c3c;
+  margin-right: 30px;
+}
+
 
 
 //      APP.VUE           //
+
 #app {
   display: flex;
   flex-direction: column;
@@ -17,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 
 //     HEADER.VUE        //
@@ -87,7 +100,6 @@ footer {
 
 //     HOME.VUE        //
 
-
 .hero {
   color: #fff;
   background: rgb(83, 139, 149);
@@ -148,9 +160,85 @@ footer {
     order: 1;
   }
 }
-
+.gg-arrow-long-right {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,4));
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  box-shadow: inset 0 0 0 2px;
+  width: 24px;
+  height: 6px;
+  //@include animateArrow;
+}
+.gg-arrow-long-right::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  right: 0;
+  bottom: -2px
+}
+.gg-arrow-long-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,4));
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  box-shadow: inset 0 0 0 2px;
+  width: 24px;
+  height: 6px;
+  left: 99%;
+  //@include animateArrow;
+}
+ .gg-arrow-long-left::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  left: 0;
+  bottom: -2px
+}
+// Gestion de l'animation du séparateur fléché 
+.animateArrow {
+  animation-name: animateArrow;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  @keyframes animateArrow {
+    0% {
+      width: 0%;
+      transform: scale(var(--ggs,5));
+    }
+    50% {
+      width: 25%;
+      transform: scale(var(--ggs,6));
+    } 
+    75% {
+      width: 50%;
+      transform: scale(var(--ggs,7));
+    }
+    100% {
+      width: 90%;
+      transform: scale(var(--ggs,8));
+    }
+  }
+}
 
 //     CATALOGUE.VUE        //
+
 table {
   margin: 100px 20px;
 }

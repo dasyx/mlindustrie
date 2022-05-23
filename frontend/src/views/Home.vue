@@ -30,6 +30,7 @@
         </div>
       </div>
     </div>
+    <i class="gg-arrow-long-right animate"></i>
   </section>
   <!-- Fin de la section formations-->
   <!-- Début de la section atouts-->
@@ -57,6 +58,7 @@
         </div>
       </div>
     </div>
+    <i class="gg-arrow-long-left animate"></i>
   </section>
   <!-- Fin de la section atouts-->
   <!-- Début de la section formateurs-->
@@ -84,6 +86,7 @@
         </div>
       </div>
     </div>
+    <i class="gg-arrow-long-right animate"></i>
   </section>
   <!-- Fin de la section formateurs-->
   <!-- Début de la section certifications-->
@@ -121,6 +124,21 @@ import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 export default {
   name: 'Home',
-  components: { Header, Footer }
+  components: { Header, Footer },
+  created () {
+    window.addEventListener('scroll', this.pageScroll)
+  },
+  unmounted () {
+    window.removeEventListener('scroll', this.pageScroll)
+  },
+  methods: {
+    pageScroll () {
+      // Any code to be executed when the window is scrolled
+      const allAnime = document.querySelectorAll('.animate')
+      for (let i = 0; i < allAnime.length; i++) {
+        allAnime[i].classList.add('animateArrow')
+      }
+    }
+  }
 }
 </script>

@@ -19,7 +19,7 @@
           <p class="has-text-center"></p>
         </div>
         <div class="column">
-          <h6>Texte</h6>
+          <h6>Documents</h6>
           <ul>
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
@@ -28,7 +28,7 @@
           </ul>
         </div>
         <div class="column">
-          <h6>Texte</h6>
+          <h6>Mentions Légales</h6>
           <ul>
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>

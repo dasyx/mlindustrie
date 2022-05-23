@@ -5,7 +5,7 @@
         <a class="navbar-item" href="/">
           <img src="../../public/logos/logo_mlindustrie.png" />
           <img src="../../public/img/accompagne.png" />
-          <hr class="displayHr" id="separate">
+          <hr class="displayHr">
           <h1 id="lowResH1"></h1>
         </a>
         <a
@@ -39,10 +39,10 @@
 
             <div class="navbar-dropdown">
               <a class="navbar-item"> Tarifs </a>
-              <a class="navbar-item"> Programmes </a>
+              <a class="navbar-item"> Programme de formation </a>
               <a class="navbar-item"> Livret Stagiaire </a>
               <hr class="navbar-divider" />
-              <a class="navbar-item"> CGV </a>
+              <a class="navbar-item"> En savoir plus </a>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default {
       }
       if (this.window.width >= 768) {
         this.isActive = false
-        document.getElementById('separate').remove('displayHr')
+        document.querySelector('.displayHr').remove('displayHr')
       }
     },
     showMobilemenu () {
