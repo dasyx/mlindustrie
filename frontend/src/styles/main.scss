@@ -1,8 +1,6 @@
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
-@import '~bulma/css/bulma.css';
-
-
+@import "~bulma/css/bulma.css";
 
 //      GENERAL          //
 
@@ -17,8 +15,6 @@ li a {
   margin-right: 30px;
 }
 
-
-
 //      APP.VUE           //
 
 #app {
@@ -29,8 +25,6 @@ li a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
 
 //     HEADER.VUE        //
 
@@ -75,7 +69,6 @@ li a {
   width: 20%;
 }
 
-
 //     FOOTER.VUE        //
 
 footer {
@@ -97,7 +90,6 @@ footer {
   background-color: #267a89;
 }
 
-
 //     HOME.VUE        //
 
 .hero {
@@ -112,6 +104,41 @@ footer {
 }
 .hero.is-medium .hero-body {
   padding: 2rem 4.5rem;
+}
+.title {
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.flex_left img {
+  width: 75%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  @media screen and (max-width: 769px) {
+    width: 100%;
+  }
+}
+.flex_right {
+  padding: 3rem;
+  background-color: #c0c4c2;
+  box-shadow: rgba(96, 107, 107, 0.4) -5px 5px, rgba(41, 43, 43, 0.3) -10px 10px, rgba(24, 23, 23, 0.2) -15px 15px, rgba(20, 20, 20, 0.1) -20px 20px, rgba(3, 3, 3, 0.05) -25px 25px;
+  @media screen and (max-width: 769px) {
+    font-size: .9rem ;
+    padding: 1.1rem;
+  }
+}
+.flex_right p {
+  margin: 8px;
+  color: #3d3c3c;
+  @media screen and (max-width: 769px) {
+    margin: 0px;
+  }
 }
 .container:not(.is-max-desktop):not(.is-max-widescreen) {
   @media screen and (min-width: 1408px) {
@@ -153,7 +180,7 @@ footer {
   }
 }
 #atouts {
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     margin-left: 80px;
   }
   @media screen and (max-width: 1023px) {
@@ -164,7 +191,7 @@ footer {
   box-sizing: border-box;
   position: relative;
   display: block;
-  transform: scale(var(--ggs,4));
+  transform: scale(var(--ggs, 4));
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
   box-shadow: inset 0 0 0 2px;
@@ -183,13 +210,13 @@ footer {
   border-right: 2px solid;
   transform: rotate(45deg);
   right: 0;
-  bottom: -2px
+  bottom: -2px;
 }
 .gg-arrow-long-left {
   box-sizing: border-box;
   position: relative;
   display: block;
-  transform: scale(var(--ggs,4));
+  transform: scale(var(--ggs, 4));
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
   box-shadow: inset 0 0 0 2px;
@@ -198,7 +225,7 @@ footer {
   left: 99%;
   //@include animateArrow;
 }
- .gg-arrow-long-left::after {
+.gg-arrow-long-left::after {
   content: "";
   display: block;
   box-sizing: border-box;
@@ -209,9 +236,52 @@ footer {
   border-left: 2px solid;
   transform: rotate(45deg);
   left: 0;
-  bottom: -2px
+  bottom: -2px;
 }
-// Gestion de l'animation du séparateur fléché 
+.gg-arrow-long-down {
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  transform: scale(var(--ggs, 4));
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  box-shadow: inset 0 0 0 2px;
+  height: 24px;
+  width: 6px;
+  margin-left: 20px;
+}
+
+.gg-arrow-long-down::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  bottom: 0;
+  left: -2px;
+  @media screen and (min-width: 1072px) {
+    width: 0;
+    height: 0;
+    border-bottom: 0;
+  }
+}
+#rightArrow {
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  transform: scale(var(--ggs, 4));
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  box-shadow: inset 0 0 0 2px;
+  height: 24px;
+  width: 6px;
+  right: 20px;
+}
+// Gestion de l'animation du séparateur fléché horizontal
 .animateArrow {
   animation-name: animateArrow;
   animation-duration: 3s;
@@ -220,19 +290,64 @@ footer {
   @keyframes animateArrow {
     0% {
       width: 0%;
-      transform: scale(var(--ggs,5));
+      transform: scale(var(--ggs, 5));
     }
     50% {
       width: 25%;
-      transform: scale(var(--ggs,6));
-    } 
+      transform: scale(var(--ggs, 6));
+    }
     75% {
       width: 50%;
-      transform: scale(var(--ggs,7));
+      transform: scale(var(--ggs, 7));
     }
     100% {
       width: 90%;
-      transform: scale(var(--ggs,8));
+      transform: scale(var(--ggs, 8));
+    }
+  }
+}
+// Gestion de l'animation du séparateur fléché vertical
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .animateArrowDown {
+    animation: animateArrowDown 3s linear forwards;
+
+    @keyframes animateArrowDown {
+      0% {
+        height: 0%;
+        transform: scale(var(--ggs, 5));
+      }
+      50% {
+        height: 25%;
+        width: 10%;
+        transform: scale(var(--ggs, 7));
+      }
+      100% {
+        height: 68.1%;
+        width: 21.5%;
+        transform: scale(var(--ggs, 8));
+      }
+    }
+  }
+}
+@media screen and (min-width: 1072px) {
+  .animateArrowDown {
+    animation: animateArrowDown 3s linear forwards;
+
+    @keyframes animateArrowDown {
+      0% {
+        height: 0%;
+        transform: scale(var(--ggs, 5));
+      }
+      50% {
+        height: 25%;
+        width: 10%;
+        transform: scale(var(--ggs, 7));
+      }
+      100% {
+        height: 39%;
+        width: 20%;
+        transform: scale(var(--ggs, 8.5));
+      }
     }
   }
 }

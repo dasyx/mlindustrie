@@ -2,6 +2,25 @@
   <Header />
   <!-- Début de la section formations-->
   <section class="hero is-medium is-bold" id="section_formations">
+    <i class="gg-arrow-long-down animateDown"></i><i id="rightArrow" class="gg-arrow-long-down animateDown"></i>
+    <!--Affichage de l'encart de présentation + certification-->
+    <div class="hero-body">
+      <h1 class="title">
+        Une entreprise de confiance
+      </h1>
+      <div class="container">
+        <div class="flex_left">
+          <img src="../../public/img/certification_qualiopi.png" />
+        </div>
+        <div class="flex_right">
+          <p>La société ML INDUSTRIE a été créée en 2019 et est implantée actuellement sur les régions rouennaise et lyonnaise.</p>
+          <p>Elle collabore avec 10 formateurs dans plusieurs domaines techniques.</p>
+          <p>En plein essor et avec 20 formations à son catalogue, elle forme environ 140 stagiaires par an et a vu son chiffre d'affaires s'élever à 130 K€ en deux ans seulement.</p>
+        </div>
+      </div>
+    </div>
+    <i class="gg-arrow-long-right animate"></i>
+    <!--Fin de l'affichage de l'encart de présentation + certification-->
     <div class="hero-body">
       <div class="container cont_formations">
         <div class="flex_txt">
@@ -137,6 +156,10 @@ export default {
       const allAnime = document.querySelectorAll('.animate')
       for (let i = 0; i < allAnime.length; i++) {
         allAnime[i].classList.add('animateArrow')
+      }
+      const allAnimeDown = document.querySelectorAll('.animateDown')
+      for (let i = 0; i < allAnimeDown.length; i++) {
+        allAnimeDown[i].classList.add('animateArrowDown')
       }
     }
   }
