@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="copyright has-text-white bottom">
-      <div class="container is-fluid">
+      <div class="is-fluid">
         <div class="columns">
           <div class="column">
             <p>Copyright © MLINDUSTRIE {{ date }}</p>

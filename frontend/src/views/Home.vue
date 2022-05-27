@@ -13,8 +13,12 @@
           <img src="../../public/img/certification_qualiopi.png" />
         </div>
         <div class="flex_right">
-          <p>La société ML INDUSTRIE a été créée en 2019 et est implantée actuellement sur les régions rouennaise et lyonnaise.</p>
-          <p>Elle collabore avec 10 formateurs dans plusieurs domaines techniques.</p>
+          <p id="firstParagraph">
+            {{ firstParagraph }}
+          </p>
+          <p id="secondParagraph">
+            {{ secondParagraph }}
+          </p>
           <p>En plein essor et avec 20 formations à son catalogue, elle forme environ 140 stagiaires par an et a vu son chiffre d'affaires s'élever à 130 K€ en deux ans seulement.</p>
         </div>
       </div>
@@ -144,12 +148,21 @@ import Footer from '../components/Footer.vue'
 export default {
   name: 'Home',
   components: { Header, Footer },
+  data () {
+    return {
+      firstParagraph: '', // initial value
+      secondParagraph: ''
+    }
+ },
   created () {
     window.addEventListener('scroll', this.pageScroll)
   },
   unmounted () {
     window.removeEventListener('scroll', this.pageScroll)
   },
+    mounted () {
+      this.typeWriter1()
+},
   methods: {
     pageScroll () {
       // Any code to be executed when the window is scrolled
@@ -161,6 +174,15 @@ export default {
       for (let i = 0; i < allAnimeDown.length; i++) {
         allAnimeDown[i].classList.add('animateArrowDown')
       }
+    },
+    typeWriter1: function () {
+      const v = this
+      setTimeout(function () {
+         v.firstParagraph = 'La Société ML INDUSTRIE a été créée en 2019 et est implantée actuellement sur les régions rouennaise et lyonnaise.'
+      }, 1000)
+      setTimeout(function () {
+         v.secondParagraph = 'Elle collabore avec 10 formateurs dans plusieurs domaines techniques.'
+      }, 3000)
     }
   }
 }
