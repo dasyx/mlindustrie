@@ -1,7 +1,7 @@
 <template>
   <Header />
   <!-- Début de la section formations-->
-  <section class="hero is-medium is-bold" id="section_formations">
+  <section class="hero is-medium is-bold" id="section_historique">
     <i class="gg-arrow-long-down animateDown"></i><i id="rightArrow" class="gg-arrow-long-down animateDown"></i>
     <!--Affichage de l'encart de présentation + certification-->
     <div class="hero-body">
@@ -19,12 +19,16 @@
           <p id="secondParagraph">
             {{ secondParagraph }}
           </p>
-          <p>En plein essor et avec 20 formations à son catalogue, elle forme environ 140 stagiaires par an et a vu son chiffre d'affaires s'élever à 130 K€ en deux ans seulement.</p>
+          <p id="thirdParagraph">
+            {{ thirdParagraph }}
+          </p>
         </div>
       </div>
     </div>
     <i class="gg-arrow-long-right animate"></i>
+    </section>
     <!--Fin de l'affichage de l'encart de présentation + certification-->
+    <section class="hero is-medium is-bold" id="section_formations">
     <div class="hero-body">
       <div class="container cont_formations">
         <div class="flex_txt">
@@ -151,7 +155,8 @@ export default {
   data () {
     return {
       firstParagraph: '', // initial value
-      secondParagraph: ''
+      secondParagraph: '',
+      thirdParagraph: ''
     }
  },
   created () {
@@ -182,6 +187,9 @@ export default {
       }, 1000)
       setTimeout(function () {
          v.secondParagraph = 'Elle collabore avec 10 formateurs dans plusieurs domaines techniques.'
+      }, 2000)
+      setTimeout(function () {
+         v.thirdParagraph = 'En plein essor et avec 20 formations à son catalogue, elle forme environ 140 stagiaires par an et a vu son chiffre d\'affaires s\'élever à 130 K€ en deux ans seulement.'
       }, 3000)
     }
   }
