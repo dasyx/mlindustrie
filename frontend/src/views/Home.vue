@@ -8,7 +8,7 @@
       <h1 class="title">
         Une entreprise de confiance
       </h1>
-      <div class="container">
+      <div class="container container_certification">
         <div class="flex_left">
           <img src="../../public/img/certification_qualiopi.png" />
         </div>
