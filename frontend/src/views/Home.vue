@@ -9,10 +9,10 @@
         Une entreprise de confiance
       </h1>
       <div class="container container_certification">
-        <div class="flex_left">
+        <div class="container_certification__flex-left">
           <img src="../../public/img/certification_qualiopi.png" />
         </div>
-        <div class="flex_right">
+        <div class="container_certification__flex-right">
           <p id="firstParagraph">
             {{ firstParagraph }}
           </p>
